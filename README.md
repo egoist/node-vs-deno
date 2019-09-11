@@ -22,7 +22,7 @@ In Node.js, most built-in features are exposed as CommonJS modules which you can
 
 For example, in Node.js you use `require('child_process').spawn` to start a subprocess, in Deno you can use `Deno.run` instead.
 
-For list of all available features go to [Deno API Reference](https://deno.land/typedoc/)
+For list of all available features go to [Deno API Reference](https://deno.land/typedoc/).
 
 ## Check if it's running in Deno
 

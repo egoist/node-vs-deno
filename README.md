@@ -33,17 +33,21 @@ const isDeno = typeof window !== 'undefined' && window.Deno
 
 `process.argv` represents command line arguments in Node.js, run the example code:
 
+<p>
 <a href="./examples/args.js">
 <img alt="run node example" src="https://user-images.githubusercontent.com/8784712/64687080-68480000-d4bc-11e9-865e-a70f1b132a69.png" width="100%">
 </a>
+</p>
 
 The first item is the name of the program being executed, in our case, it's an absolute path to `node`.
 
 In Deno, you use `Deno.args` instead to retrive command line arguments:
 
+<p>
 <a href="./examples/args.ts">
 <img alt="run deno example" src="https://user-images.githubusercontent.com/8784712/64687185-9a596200-d4bc-11e9-8cf7-6868b29fdde4.png" width="100%">
 </a>
+</p>
 
 Note that there're only three items in the array, **the path to `deno` executable is not included**, the second item is also just a relative path.
 

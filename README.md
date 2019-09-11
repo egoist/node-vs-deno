@@ -2,7 +2,7 @@
 
 If you come from [Node.js](https://nodejs.org), you might find that a lot of things are very similar in [Deno](https://deno.land), here we show some features that Deno and Node.js have in common, it would be great for learning purpose.
 
-Keeping updating..
+Keep updating..
 
 ## Table of Contents
 

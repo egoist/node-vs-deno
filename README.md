@@ -50,7 +50,7 @@ In Deno, you use `Deno.args` instead to retrive command line arguments:
 </a>
 </p>
 
-Note that there're only three items in the array, **the path to `deno` executable is not included**, the second item is also just a relative path.
+Note that there're only three items in the array, **the path to `deno` executable is not included**, the first item is also just a relative path.
 
 ## Spawn a subprocess
 

@@ -12,6 +12,7 @@ Keep updating..
 - [Check if it's running in Deno](#check-if-its-running-in-deno)
 - [Command-line arguments](#command-line-arguments)
 - [Spawn a subprocess](#spawn-a-subprocess)
+- [Hashing algorithms](#hashing-algorithms)
 
 <!-- tocstop -->
 
@@ -104,4 +105,40 @@ if (code === 0) {
   const rawError = await p.stderrOutput()
   await Deno.stderr.write(rawError)
 }
+```
+
+## Hashing algorithms
+
+In Node.js:
+
+```js
+const crypto = require('crypto')
+
+// sha1
+console.log(
+  crypto
+    .createHash('sha1')
+    .update('hello world')
+    .digest('hex')
+)
+
+// md5
+console.log(
+  crypto
+    .createHash('md5')
+    .update('hello world')
+    .digest('hex')
+)
+```
+
+In Deno:
+
+```js
+import { Hash, encode } from 'https://deno.land/x/checksum/mod.ts'
+
+// sha1
+console.log(new Hash('sha1').digest(encode('hello world')).hex())
+
+// md5
+console.log(new Hash('md5').digest(encode('hello world')).hex())
 ```

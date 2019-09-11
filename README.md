@@ -9,6 +9,7 @@ Keep updating..
 <!-- toc -->
 
 - [Built-in features](#built-in-features)
+- [Check if it's running in Deno](#check-if-its-running-in-deno)
 - [Command-line arguments](#command-line-arguments)
 - [Spawn a subprocess](#spawn-a-subprocess)
 
@@ -19,6 +20,14 @@ Keep updating..
 In Node.js, most built-in features are exposed as CommonJS modules which you can use via `require` calls, while in Deno, they are exposed on the global namespace `Deno`.
 
 For example, in Node.js you use `require('child_process').spawn` to start a subprocess, in Deno you can use `Deno.run` instead.
+
+## Check if it's running in Deno
+
+Due to the fact that Deno exposes its specific features on `Deno` namespace, you can use it to determine if your program is running in Deno:
+
+```ts
+const isDeno = typeof window !== 'undefined' && window.Deno
+```
 
 ## Command-line arguments
 

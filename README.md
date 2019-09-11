@@ -22,6 +22,8 @@ In Node.js, most built-in features are exposed as CommonJS modules which you can
 
 For example, in Node.js you use `require('child_process').spawn` to start a subprocess, in Deno you can use `Deno.run` instead.
 
+For list of all available features go to [Deno API Reference](https://deno.land/typedoc/)
+
 ## Check if it's running in Deno
 
 Due to the fact that Deno exposes its specific features on `Deno` namespace, you can use it to determine if your program is running in Deno:
@@ -50,7 +52,7 @@ In Deno, you use `Deno.args` instead to retrive command line arguments:
 </a>
 </p>
 
-Note that there're only three items in the array, **the path to `deno` executable is not included**, the first item is also just a relative path.
+Note that there're only three items in the array, **the path to `deno` executable is not included**. To get path to Deno executable use [`Deno.execPath()`](https://deno.land/typedoc/index.html#execpath). The first item is also just a relative path.
 
 ## Spawn a subprocess
 

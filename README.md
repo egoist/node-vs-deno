@@ -22,7 +22,7 @@ For example, in Node.js you use `require('child_process').spawn` to start a subp
 
 ## Command-line arguments
 
-`process.argv` represents command line arguments in Node.js which includes the binary name, run the example code:
+`process.argv` represents command line arguments in Node.js, run the example code:
 
 <a href="./examples/args.js">
 <img alt="run node example" src="https://user-images.githubusercontent.com/8784712/64687080-68480000-d4bc-11e9-865e-a70f1b132a69.png" width="100%">

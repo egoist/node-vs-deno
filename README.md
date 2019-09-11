@@ -24,13 +24,17 @@ For example, in Node.js you use `require('child_process').spawn` to start a subp
 
 `process.argv` represents command line arguments in Node.js which includes the binary name, run the example code:
 
-![carbon.png](https://i.loli.net/2019/09/11/YyMZ6VhEmcsCk3q.png)
+<a href="./examples/args.js">
+<img alt="run node example" src="https://user-images.githubusercontent.com/8784712/64687080-68480000-d4bc-11e9-865e-a70f1b132a69.png" width="100%">
+</a>
 
 The first item is the name of the program being executed, in our case, it's an absolute path to `node`.
 
 In Deno, you use `Deno.args` instead to retrive command line arguments:
 
-<img src="https://i.loli.net/2019/09/11/LVQIT9nUxCJt5iH.png" width="100%">
+<a href="./examples/args.ts">
+<img alt="run deno example" src="https://user-images.githubusercontent.com/8784712/64687185-9a596200-d4bc-11e9-8cf7-6868b29fdde4.png" width="100%">
+</a>
 
 Note that there're only three items in the array, **the path to `deno` executable is not included**, the second item is also just a relative path.
 

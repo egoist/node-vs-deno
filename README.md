@@ -13,6 +13,7 @@ Keep updating..
 - [Command-line arguments](#command-line-arguments)
 - [Spawn a subprocess](#spawn-a-subprocess)
 - [Hashing algorithms](#hashing-algorithms)
+- [Colored output](#colored-output)
 
 <!-- tocstop -->
 
@@ -59,7 +60,7 @@ Note that there're only three items in the array, **the path to `deno` executabl
 Node.js's [`child_process.spawn()`](https://nodejs.org/dist/latest/docs/api/child_process.html#child_process_child_process_spawn_command_args_options) method is used to spawn a new process:
 
 ```js
-const { spawn } = require('child_process')
+import { spawn } from 'child_process'
 
 const p = spawn('ls', ['./examples'])
 
@@ -114,7 +115,7 @@ if (code === 0) {
 In Node.js:
 
 ```js
-const crypto = require('crypto')
+import crypto from 'crypto'
 
 // sha1
 console.log(
@@ -143,4 +144,20 @@ console.log(new Hash('sha1').digest(encode('hello world')).hex())
 
 // md5
 console.log(new Hash('md5').digest(encode('hello world')).hex())
+```
+
+## Colored output
+
+In Node.js:
+
+```js
+import chalk from 'chalk'
+
+console.log(chalk.bold(chalk.bgGreen('foo')))
+```
+
+In Deno:
+
+```js
+console.log('%cfoo', 'font-weight:bold;background-color:green')
 ```
